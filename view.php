@@ -1,5 +1,5 @@
 <?php
-include_once 'dbconfig.php';
+include_once 'includes/dbh.inc.php';
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,18 +11,25 @@ include_once 'dbconfig.php';
     <td><b>Bestandsnaam</td>
     <td><b>Bestandstype</td>
     <td><b>Bestandgrootte in KB</td>
-    <td><b>-</td>
+    <td><b>Naam</td>
     </tr>
     <?php
 	$sql="SELECT * FROM tbl_uploads";
 	$result_set=mysqli_query($conn, $sql);
 	while($row=mysqli_fetch_array($result_set))
 	{ 
+        $user_id = $row['user_id'];
+        $user_sql="SELECT * FROM users WHERE user_id='$user_id'";
+        $user_result_set=mysqli_query($conn, $user_sql);
+        while($user_row=mysqli_fetch_array($user_result_set))
+        {
+            $fullname = $user_row['user_first'] . ' ' . $user_row['user_last'];
+        }
 		?>
-        <tr>
-        <td><?php echo $row['file'] ?></td>
-        <td><?php echo $row['type'] ?></td>
-        <td><?php echo $row['size'] ?></td>
+        <td><?php echo $row['file']?></td>
+        <td><?php echo $row['type']?></td>
+        <td><?php echo $row['size']?></td>
+        <td><?php echo $fullname?></td>
         <td><a href="uploads/<?php echo $row['file'] ?>" target="_blank">Bekijk</a></td>
         </tr>
         <?php

@@ -14,7 +14,9 @@
 	<nav>
 		<div class="main-wrapper">
 			<ul>
-				<li><a href="index.php">&lt;logo&gt;</a></li>
+				<div class="logo">
+				<li><a href="index.php"><img src="https://forcedesign.nl/wp-content/uploads/2017/11/LogoSmall-1.png"></a></li>
+				</div>
 			</ul>	
 			<div class="nav-login">
 				<?php

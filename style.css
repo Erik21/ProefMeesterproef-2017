@@ -31,6 +31,7 @@ body {
     line-height:1;
 }
 
+
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section { 
     display:block;
@@ -106,6 +107,16 @@ input, select {
 .main-wrapper {
     margin: 0 auto;
     width: 1000px;
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.test {
+    text-align: center;
 }
 
 a {
@@ -127,7 +138,6 @@ header nav ul {
 }
 
 header nav ul li {
-    float: left;
     list-style: none;
 }
 
@@ -194,6 +204,7 @@ header .nav-login a {
 
 .main-container {
     padding-top: 40px;
+    text-align: center;
 }
 
 .main-container h2 {
@@ -203,6 +214,30 @@ header .nav-login a {
     line-height: 50px;
     text-align: center;
 }
+
+.main-container h1 {
+    font-family: arial;
+    font-size: 25px;
+    color: #111;
+    line-height: 50px;
+    text-align: center;
+}
+
+.main-container button {
+    font-family: arial;
+    font-size: 16px;
+}
+
+.main-container button:hover {
+    font-family: arial;
+    font-size: 15px;
+}
+
+.main-container input {
+    font-family: arial;
+    font-size: 16px;
+}
+
 
 /*signup.php*/
 
@@ -237,6 +272,7 @@ header .nav-login a {
     color: #fff;
     cursor: pointer;
 }
+
 
 .signup-form button:hover  {  
     background-color: #111; 
