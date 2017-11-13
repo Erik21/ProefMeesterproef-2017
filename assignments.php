@@ -1,6 +1,5 @@
 <?php
 	include_once 'header.php';
-	include_once 'dbconfig.php';
 	include_once 'includes/dbh.inc.php';
 ?>
 
